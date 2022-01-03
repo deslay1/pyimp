@@ -285,7 +285,6 @@ class Importance(object):
         if model_short_name not in ['urfi', 'rfi']:
             raise ValueError('Specified model %s does not exist or not supported!' % model_short_name)
         elif model_short_name == 'rfi':
-            print("\nRANDOM FOREST\n")
             self.types, self.bounds = self._get_types(self.scenario.cs, self.scenario.feature_array)
             self._model = RandomForestWithInstances(self.scenario.cs, self.types, self.bounds, 12345,
                                                     instance_features=self.scenario.feature_array,

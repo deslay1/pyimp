@@ -280,7 +280,7 @@ class LPI(AbstractEvaluator):
         only_show = sorted(list(evaluated_parameter_importance.keys()),
                            key=lambda p: evaluated_parameter_importance[p])[:min(self.to_evaluate,
                                                                                  len(evaluated_parameter_importance.keys()))]
-
+        
         self.neighborhood_dict = neighborhood_dict
         self.performance_dict = performance_dict
         self.variance_dict = variance_dict

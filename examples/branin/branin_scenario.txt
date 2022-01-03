@@ -1,5 +1,5 @@
 algo = python branin.py
 paramfile = branin_pcs.pcs
 run_obj = quality
-runcount_limit = 500
+runcount_limit = 50
 deterministic = 1

@@ -142,7 +142,7 @@ class RandomForestWithInstances(AbstractEPM):
                         self.impute_values[idx] = 1
                     else:
                         raise ValueError
-
+        
             nonfinite_mask = ~np.isfinite(X[:, idx])
             X[nonfinite_mask, idx] = self.impute_values[idx]
 

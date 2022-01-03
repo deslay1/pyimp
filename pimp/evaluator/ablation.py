@@ -295,6 +295,9 @@ class Ablation(AbstractEvaluator):
         prev_performance = source_mean
         target_mean, target_var = self._predict_over_instance_set(impute_inactive_values(self.target))
         improvement = prev_performance - target_mean
+        print(self.source)
+        print(self.target)
+        print(improvement)
         self.predicted_parameter_performances['-source-'] = source_mean.flatten()[0]
         self.predicted_parameter_variances['-source-'] = source_var.flatten()[0]
         self.evaluated_parameter_importance['-source-'] = 0
